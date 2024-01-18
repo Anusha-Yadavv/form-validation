@@ -84,3 +84,9 @@ function signUpUser(event) {
   alert("Sign up successful!");
   return true;
 }
+
+function logoutUser(){
+    // localStorage.removeItem("userData");
+    window.location.href = "index.html";
+
+}

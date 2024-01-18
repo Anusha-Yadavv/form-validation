@@ -11,19 +11,73 @@
 
 <body>
 
-    <div class="courses-container">
-        <h2>Learning Courses</h2>
+    <main class="courses-container">
+
+        <header>
+            <nav>
+                <h1>Learning Courses</h1>
+                <button onclick="logoutUser()">Logout</button>
+
+            </nav>
+
+        </header>
+        <p class="description">Welcome to the learning platform! Explore the available courses to enhance your skills.
+        </p>
+        <p class="description">Thank you for sigining up. Select your first course</p>
+
+
 
         <ul class="course-list">
-            <li class="course-item">Course 1: Introduction to JavaScript</li>
-            <li class="course-item">Course 2: HTML and CSS Basics</li>
-            <li class="course-item">Course 3: Python for Beginners</li>
-            <li class="course-item">Course 4: Responsive Web Design</li>
-            <li class="course-item">Course 5: Data Science Essentials</li>
+            <li class="course-item">
+                <div class="course-container">
+                    <img class="course-img" src="./assets/sign-up/js.jpg" alt="" JavaScript>
+                    <p class="para">Introduction to JavaScript</p>
+                </div>
+            </li>
+            <li class="course-item">
+                <div class="course-container">
+                    <img class="course-img"
+                        src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191217202846/Programming-for-Beginners-10-Best-HTML-Coding-Practices-You-Must-Know.png"
+                        alt="HTML">
+                    <p class="para">HTML and CSS Basics</p>
+
+                </div>
+            </li>
+            <li class="course-item">
+                <div class="course-container">
+                    <img class="course-img"
+                        src="https://knackforge.com/wp-content/uploads/2022/11/Benefits-of-ReactJS.jpg"
+                        alt="data science">
+                    <p class="para">React JS</p>
+                </div>
+            </li>
+            <li class="course-item">
+                <div class="course-container">
+                    <img class="course-img"
+                        src="https://rooman.net/wp-content/uploads/2021/11/python-programing-banner.jpg" alt="Python">
+                    <p class="para">Python for Beginners</p>
+                </div>
+            </li>
+            <li class="course-item">
+                <div class="course-container">
+                    <img class="course-img"
+                        src="https://tsh.io/wp-content/uploads/2022/05/new-nodejs-features-19-20.png" alt="Responsive">
+                    <p class="para">Node JS</p>
+
+                </div>
+            </li>
+            <li class="course-item">
+                <div class="course-container">
+                    <img class="course-img"
+                        src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2019/09/11134058/What-is-data-science-2.jpg"
+                        alt="data science">
+                    <p class="para">Data Science Essentials</p>
+                </div>
+            </li>
         </ul>
 
-        <p>Welcome to the learning platform! Explore the available courses to enhance your skills.</p>
-    </div>
+    </main>
+    <script src="script.js"></script>
 
 </body>
 
