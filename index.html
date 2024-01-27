@@ -68,7 +68,7 @@
                         </div>
                         <form class="auth-form" onsubmit="return loginUser();">
                             <label for="loginEmail">Email:</label>
-                            <input type="email" id="loginEmail" name="loginEmail" required>
+                            <input type="email" id="loginEmail" name="loginEmail" autocomplete="new-password" required>
 
                             <label for="loginPassword">Password:</label>
                             <input type="password" id="loginPassword" name="loginPassword" autocomplete="new-password"
@@ -76,7 +76,7 @@
 
 
                             <div class="buttons-container">
-                                <button type="submit">Login</button>
+                                <button id="login-btn" type="submit">Login</button>
                                 <button onclick="toggleSignupForm()">Create account</button>
                             </div>
 
@@ -91,7 +91,8 @@
                         <h2>Sign Up</h2>
                         <form class="auth-form" onsubmit="return signUpUser();">
                             <label for="signupUsername">Username:</label>
-                            <input type="text" id="signupUsername" name="signupUsername" required>
+                            <input type="text" id="signupUsername" name="signupUsername" autocomplete="new-password"
+                                required>
 
                             <label for="signupEmail">Email:</label>
                             <input type="email" id="signupEmail" name="signupEmail" required>
@@ -99,6 +100,9 @@
                             <label for="signupPassword">Password:</label>
                             <input type="password" id="signupPassword" name="signupPassword" autocomplete="new-password"
                                 required>
+
+                            <i id="passwordToggle" class="eye-icon" onclick="togglePasswordVisibility()">&#128065;</i>
+
 
                             <button type="submit">Sign Up</button>
                             <p class="error-message" id="signupErrorMessage"></p>

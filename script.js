@@ -3,6 +3,7 @@ function loginUser(event) {
   const passwordEle = document.getElementById("loginPassword");
   const email = emailEle.value;
   const password = passwordEle.value;
+  const loginButton = document.getElementById("login-btn");
 
   const userDataString = localStorage.getItem("userData");
   console.log("USER DATA STRING ", userDataString);
@@ -66,8 +67,14 @@ function signUpUser(event) {
   console.log("exist user Email", existingUser);
 
   if (existingUser) {
-    document.getElementById("signupErrorMessage").innerHTML =
-      "User with the same email already exists. Please log in or use a different email.";
+    alert(
+      "User with the same email already exists. Please log in or use a different email."
+    );
+    /* document.getElementById("signupErrorMessage").innerHTML =
+      "User with the same email already exists. Please log in or use a different email.";*/
+
+    loginButton.style.display = "block";
+
     return false;
   }
 
@@ -85,8 +92,18 @@ function signUpUser(event) {
   return true;
 }
 
-function logoutUser(){
-    // localStorage.removeItem("userData");
-    window.location.href = "index.html";
+function logoutUser() {
+  window.location.href = "index.html";
+}
+function togglePasswordVisibility() {
+  var passwordInput = document.getElementById("signupPassword");
+  var passwordToggle = document.getElementById("passwordToggle");
 
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    passwordToggle.innerHTML = "&#128064;";
+  } else {
+    passwordInput.type = "password";
+    passwordToggle.innerHTML = "&#128065;";
+  }
 }
